@@ -1,3 +1,15 @@
+// Creating a function with one argument which will return true if the user's age is greater or equals 18. 
+// When it comes to the age less than 18, the function returns false. 
+// This function presents very basic condition while looping thing is being done by filter function below.  
+function user_age(tweet) {
+  if(tweet['age'] >= 18) {
+      return true;
+  }else {
+      return false;
+}
+}
+
+
 // Presenting an array of strings - 10 book names
 var books = ["Broken Glass", "Harry Potter and the Goblet of Fire", "A Little Life", "The Tipping Point", "Darkmans",
 "The Siege", "Light", "Visitation", "Bad Blood", "Noughts & Crosses"];
@@ -74,13 +86,6 @@ for(var i=0; i < tweets.length; i++) {
     console.log(tweets[i]['username']);
     console.log(tweets[i]['created_at']);
 }
-// I can't make it working
-function tweets(array) {
-    for(var i=0; i < tweets.length; i++) {
-        if(tweets([i]['age']) >= 18) {
-            return true;
-        }else {
-            return false;
-        }
-    }
-}
+
+// Calling this filter and function creates a new array of objects based on the function's condition above. 
+var minor_users = tweets.filter(user_age);
