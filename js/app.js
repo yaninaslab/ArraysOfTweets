@@ -89,3 +89,4 @@ for(var i=0; i < tweets.length; i++) {
 
 // Calling this filter and function creates a new array of objects based on the function's condition above. 
 var minor_users = tweets.filter(user_age);
+console.log(minor_users);
